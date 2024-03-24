@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail</title>
+  <link rel="shortcut icon" href="./assets/images/logo/logo_white.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+  <!-- Header -->
+  <section class="header">
+    <div class="header-wrapper-main">
+    <div class="header-wrapper">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo/logo_white.png" alt="logo" />
+      </a>
+      <div class="menus">
+        <div class="top-menu">
+          <div class="whatsapp">
+            <a href="">
+              <img src="./assets/images/icons/whatsapp.svg" alt="whatsapp" />
+              <h5 class="whatsapp-no">+977 984-1549864</h5>
+            </a>
+          </div>
+          <div class="search">
+            <form action="get" class="search-form">
+              <input type="search" class="search-trip" placeholder="Search Trip" />
+              <button>
+                <img src="./assets/images/icons/search.svg" alt="" />
+              </button>
+            </form>
+            <img src="./assets/images/icons/search.svg" class="search-switch" alt="search" />
+          </div>
+         
+          <button class="menu-burger"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="bottom-menu">
+          <div class="nav-wrapper">
+            <nav role="navigation">
+              <div class="nav-toggle">
+                <span class="nav-back"></span>
+                <span class="nav-title">Menu</span>
+                <span class="nav-close"></span>
+              </div>
+              <ul class="main-nav">
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Activities</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/faq" class="nav-link">Treakking</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="vertical-nav">
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Everest Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Everest Panorama 7 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Luxary trek 10 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Panaroma Tengboche 11 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Annapurna Region Trekking</a></li>
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Langtang Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Langtang Kenjin Gompa 10 Days</a></li>
+                        <li class="has-dropdown">
+                          <a href="/faq" class="nav-link">Shamanism Ruby Vally 10 Days</a>
+                          <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                          <ul class="vertical-nav">
+                            <li><a href="#" class="nav-link">Langtang –Ganja-La Pass 14 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 16 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 24 Days</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#" class="nav-link">Langtang Chisapani 4 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Manaslu Region Trekking</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Destinations</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/testimonials" class="nav-link">Tours</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="horizontal-nav">
+                    <li>
+                      <a href="/ktm_tour" class="nav-link">Kathmandu Day Tour</a>
+                    </li>
+                    <li><a href="#" class="nav-link">Kathmandu Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Family Tour</a></li>
+                    <li><a href="#" class="nav-link">Lumbini Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Homestay Tour</a></li>
+                    <li><a href="#" class="nav-link">Himalaya Tour</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-button">Gift a Tour</a></li>
+                <li><a href="#" class="nav-button nav-button-fillup">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--  Nav -->
+    <!-- Side nav close -->
+  </section>
+  <!-- Header close -->
+  <!-- Banner -->
+  <section class="banner" style="
+  background-image: url('./assets/images/banner/banner-slider-detail.png');
+  ">
+    <div class="banner-wrapper">
+      <div class="trip-detail-header">
+       <div class="container">
+        <section class="section-space-x trip-detail-header-section">
+          <div class="trip-detail-main">
+            <h1>Everest Trek</h1>
+          </div>
+        </section>
+       </div>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Close -->
+  <div class="container">
+
+  
+    <section class="section-space-x detail-full-trip-wrap">
+      <div class="detail-full-trip detail-full-trip-full">
+      <div class="about-trip-detail trip-section" id="about-trip-detail">
+        <div class="trip-detail-section-title">
+          <h5>Introduction</h5>
+        </div>
+        <div>
+          <p>Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+            conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+            Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna III,
+            Machhapuchare, Hiunchuli, Gangapurna, Tent peak, and many other peaks.Annapurna Base camp trekking is
+            situated northern central part of Nepal and also inside the Annapurna conservation area at an altitude of
+            4130 m on the lap of the world’s 10th Highest Mountain Annapurna I. </p>
+          <br>
+          <p>
+            Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+            conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+            Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna.
+          </p>
+        </div>
+      </div>
+      <div class=" trip-section" id="">
+        <div class="trip-detail-section-title trip-section-border">
+          <h5>Popular Packages</h5>
+        </div>
+        <div class="trip-detail-section-detail trip-detail-section-list-type">
+          <div class="trip-detail-section-list-type-header">
+            <div class="trip-detail-section-list-type-header-detail">
+              <p>Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+                conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+                Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna.
+              </p>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle3.svg" alt="" />
+                  <div class="discount-off">
+                    <h6 class="">20% Off</h6>
+                    <p>On Group Deal</p>
+                  </div>
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle3.svg" alt="" />
+                  <div class="discount-off">
+                    <h6 class="">20% Off</h6>
+                    <p>On Group Deal</p>
+                  </div>
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle3.svg" alt="" />
+                  <div class="discount-off">
+                    <h6 class="">20% Off</h6>
+                    <p>On Group Deal</p>
+                  </div>
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#">
+                    <h6 class="trending-cart-detail-title">
+                      Mount Kailash Trek via Humla
+                    </h6>
+                  </a>
+                  <div class="trending-cart-other">
+                    <div class="trending-location-days">
+                      <div class="trending-location">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <span>Nepal</span>
+                      </div>
+                      <div class="trending-days">
+                        <span>14 Days Trip</span>
+                      </div>
+                    </div>
+                    <div class="trending-review-price">
+                      <div class="trending-review">
+                        <i class="fa-solid fa-star fillup"></i>
+                        <span>4.5 ( 10 Reviews)</span>
+                      </div>
+                      <div class="trending-price">
+                        <span>From $3000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" trip-section" id="">
+        <div class="trip-detail-section-title trip-section-border">
+          <h5>Places to Visit</h5>
+        </div>
+        <div class="trip-detail-section-detail trip-detail-section-list-type">
+          <div class="trip-detail-section-list-type-header">
+            <div class="trip-detail-section-list-type-header-detail">
+              <p>Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+                conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+                Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna.
+              </p>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Kathmandu
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle3.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Pokhara
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Mustang
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Solukhumbu
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle3.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Rashuwa
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class=" trending-cart">
+                <div class="trending-cart-image">
+                  <img src="./assets/images/uploads/Rectangle.svg" alt="" />
+                </div>
+                <div class="trending-cart-detail">
+                  <a href="#" class="d-block text-center w-100">
+                    <h6 class="trending-cart-detail-title">
+                      Chitwan
+                    </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" trip-section" id="">
+        <div class="trip-detail-section-title trip-section-border">
+          <h5>Best Time to Visit</h5>
+        </div>
+        <div class="trip-detail-section-detail trip-detail-section-list-type">
+          <div class="trip-detail-section-list-type-header">
+            <div class="trip-detail-section-list-type-header-detail">
+              <p>Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+                conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+                Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna
+                III, Machhapuchare, Hiunchuli, Gangapurna, Tent peak, and many other peaks.Annapurna Base camp trekking
+                is situated northern central part of Nepal and also inside the Annapurna conservation area at an
+                altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+              </p>
+              <br>
+              <p>
+                Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+                conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+                Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" trip-section" id="">
+        <div class="trip-detail-section-title trip-section-border">
+          <h5>Photo Gallery</h5>
+        </div>
+        <div class="trip-detail-section-detail trip-detail-section-list-type">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6339.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6339.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6340.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6340.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6341.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6341.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6342.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6342.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6343.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6343.png" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="trip-detail-gallery">
+                <a href="./assets/images/uploads/Rectangle 6344.png" data-fancybox="gallery">
+                  <img src="./assets/images/uploads/Rectangle 6344.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trip-detail-map trip-section" id="trip-detail-map">
+        <div class="trip-detail-section-title trip-section-border">
+          <h5>Related Map</h5>
+        </div>
+        <div class="trip-detail-section-detail trip-detail-section-list-type">
+          <div class="trip-detail-section-list-type-header">
+            <div class="trip-detail-section-list-type-header-detail">
+              <p>Annapurna Base camp trekking is situated northern central part of Nepal and also inside the Annapurna
+                conservation area at an altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+                Annapurna base camp is surrounded by the majestic Himalayas like Annapurna I, Annapurna II, Annapurna
+                III, Machhapuchare, Hiunchuli, Gangapurna, Tent peak, and many other peaks.Annapurna Base camp trekking
+                is situated northern central part of Nepal and also inside the Annapurna conservation area at an
+                altitude of 4130 m on the lap of the world’s 10th Highest Mountain Annapurna I.
+              </p>
+            </div>
+          </div>
+          <div class="trip-detail-section-detail">
+            <img src="./assets/images/uploads/map.png" alt="map.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- trip of month close -->
+  <section class="why-choose-wrapper section-space">
+    <div class="container">
+      <h3 class="why-choose-title">
+        Why Choose us?
+      </h3>
+      <div class="why-choose-items">
+        <div class="why-choose-items-left">
+          <div class="why-choose-item">
+            <div class="why-choose-item-image">
+              <img src="./assets/images/icons/location.svg" alt="location.svg" srcset="">
+            </div>
+            <div class="why-choose-title-detail">
+              <h6 class="why-choose-item-title">
+                Run by Local Sherpas
+              </h6>
+              <div class="why-choose-item-detail">
+                <p> We offer specifically trained local guides and sherpas with decades of experience in your service
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-item-image">
+              <img src="./assets/images/icons/security.svg" alt="security.svg" srcset="">
+            </div>
+            <div class="why-choose-title-detail">
+              <h6 class="why-choose-item-title">
+                Safety & Security First
+              </h6>
+              <div class="why-choose-item-detail">
+                <p> We provide ideally planned trips with an emphasis on the client's safety and security.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-choose-items-center">
+          <h2 class="why-choose-lg">
+            Why
+            Choose us?
+          </h2>
+        </div>
+        <div class="why-choose-items-right">
+          <div class="why-choose-item">
+            <div class="why-choose-item-image">
+              <img src="./assets/images/icons/handshake.svg" alt="handshake.svg" srcset="">
+            </div>
+            <div class="why-choose-title-detail">
+              <h6 class="why-choose-item-title">
+                Trusted by Most Traveller
+              </h6>
+              <div class="why-choose-item-detail">
+                <p> With 70% of repeated clients, we are trusted by thousands for their once-in-a-lifetime trips to
+                  Nepal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="why-choose-item">
+            <div class="why-choose-item-image">
+              <img src="./assets/images/icons/map.svg" alt="map.svg" srcset="">
+            </div>
+            <div class="why-choose-title-detail">
+              <h6 class="why-choose-item-title">
+                Fully Customize Trip
+              </h6>
+              <div class="why-choose-item-detail">
+                <p> With 70% of repeated clients, we are trusted by thousands for their once-in-a-lifetime trips to
+                  Nepal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trip-advisor">
+        <img src="./assets/images/icons/tripadvisor.svg" alt="tripadvisor.svg" srcset="">
+      </div>
+    </div>
+
+  </section>
+  <!-- why choose close -->
+  <!-- travelers voice -->
+  <section class="traveller-voice-wrapper section-space">
+    <div class="traveller-voice-header">
+      <h3>Traveller’s Voice</h3>
+      <p>We have a unique way of meeting your trip expectations!</p>
+    </div>
+    <div id="traveller-voice-cart-wrapper" class="owl-carousel owl-theme">
+      <div class="item traveller-voice-cart">
+        <div class="traveller-voice-cart-image">
+          <img src="./assets/images/traveller/traveller1.svg" class="traveller-image" alt="traveller1.svg" />
+          <div class="traveller-voice-cart-detail-overlay">
+            <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/bDJKs6r___g" href="javascript:;"
+              class="play-button">
+              <img src="./assets/images/icons/play-button.svg" alt="">
+            </a>
+            <h5 class="traveller-voice-name">
+              Aonghus H
+            </h5>
+            <p class="traveller-voice-location">Abu Dhabi, United Arab Emirates</p>
+          </div>
+        </div>
+        <div class="traveller-voice-cart-detail-outer">
+          <h5 class="traveller-voice-travel">
+            Mt. Everest Basecamp rekking
+          </h5>
+          <div class="traveller-voice-rating">
+            <div class="stars">
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+            </div>
+            <div class="star-rating">
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item traveller-voice-cart">
+        <div class="traveller-voice-cart-image">
+          <img src="./assets/images/traveller/traveller2.svg" class="traveller-image" alt="traveller2.svg" />
+          <div class="traveller-voice-cart-detail-overlay">
+            <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/bDJKs6r___g" href="javascript:;"
+              class="play-button">
+              <img src="./assets/images/icons/play-button.svg" alt="">
+            </a>
+            <h5 class="traveller-voice-name">
+              Aonghus H
+            </h5>
+            <p class="traveller-voice-location">Abu Dhabi, United Arab Emirates</p>
+          </div>
+        </div>
+        <div class="traveller-voice-cart-detail-outer">
+          <h5 class="traveller-voice-travel">
+            Mt. Everest Basecamp rekking
+          </h5>
+          <div class="traveller-voice-rating">
+            <div class="stars">
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+            </div>
+            <div class="star-rating">
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item traveller-voice-cart">
+        <div class="traveller-voice-cart-image">
+          <img src="./assets/images/banner/banner-slider.svg" class="traveller-image" alt="traveller1.svg" />
+          <div class="traveller-voice-cart-detail-overlay">
+            <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/bDJKs6r___g" href="javascript:;"
+              class="play-button">
+              <img src="./assets/images/icons/play-button.svg" alt="">
+            </a>
+            <h5 class="traveller-voice-name">
+              Aonghus H
+            </h5>
+            <p class="traveller-voice-location">Abu Dhabi, United Arab Emirates</p>
+          </div>
+        </div>
+        <div class="traveller-voice-cart-detail-outer">
+          <h5 class="traveller-voice-travel">
+            Mt. Everest Basecamp rekking
+          </h5>
+          <div class="traveller-voice-rating">
+            <div class="stars">
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+              <i class="fa-solid fa-star fillup"></i>
+            </div>
+            <div class="star-rating">
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- travelers voice close -->
+</div>
+   <!-- newsletter -->
+   <section class="section-space newsletter-section">
+    <div class="container">
+      <div class="newsletter-wrapper">
+        <div class="newsletter-text">
+          <h4 class="newsletter-header">
+            Subscribe to Newsletter
+          </h4>
+          <p>Get Updated about Travel Tips, Idea andStories from Community</p>
+        </div>
+        <form action="#" action="POST" class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- newsletter close-->
+  <section class="footer section-space  ">
+    <div class="container">
+      <div class="footer-wrapper">
+
+      
+   
+    <div class="footer-associate">
+      <h3 class="footer-associate-header">We are Proudly Associated with</h3>
+      <div class="footer-associate-company">
+        <a href="#"><img src="./assets/images/uploads/asso1.png" alt="asso1.png"></a>
+        <a href="#"><img src="./assets/images/uploads/asso2.png" alt="asso2.png"></a>
+        <a href="#"><img src="./assets/images/uploads/asso3.png" alt="asso3.png"></a>
+        <a href="#"><img src="./assets/images/uploads/asso4.png" alt="asso4.png"></a>
+      </div>
+    </div>
+    <div class="footer-links row">
+      <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+        <div class="footer-link-group">
+          <h6 class="footer-link-title">
+            About Us
+          </h6>
+          <div class="footer-navigation">
+            <a href="#" class="footer-nav">About us</a>
+            <a href="#" class="footer-nav">Our Services</a>
+            <a href="#" class="footer-nav">Our Teams</a>
+            <a href="#" class="footer-nav">CSR</a>
+            <a href="#" class="footer-nav">Legal Documents</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+        <div class="footer-link-group">
+          <h6 class="footer-link-title">
+            Popular Trekking
+          </h6>
+          <div class="footer-navigation">
+            <a href="#" class="footer-nav">Mt. Kailash via Humla</a>
+            <a href="#" class="footer-nav">Rara Lake Trek</a>
+            <a href="#" class="footer-nav">Everest Basecamp Trek</a>
+            <a href="#" class="footer-nav">Annapurna Basecamp Trek</a>
+            <a href="#" class="footer-nav">Tilicho Lake Trek</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+        <div class="footer-link-group">
+          <h6 class="footer-link-title">
+            Popular Travel & Tour
+          </h6>
+          <div class="footer-navigation">
+            <a href="#" class="footer-nav">Lhasa City Tour</a>
+            <a href="#" class="footer-nav">Chitwan Safari</a>
+            <a href="#" class="footer-nav">Pokhara Fewa Lake Tour</a>
+            <a href="#" class="footer-nav">Bardiya Safari</a>
+            <a href="#" class="footer-nav">Rara Tour</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+        <div class="footer-link-group">
+          <h6 class="footer-link-title">
+            Contact
+          </h6>
+          <div class="footer-navigation">
+            <div class="footer-nav-group">
+              <i class="fa-solid fa-phone"></i>
+              <div class="footer-nav-group-collect">
+                <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+                <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+              </div>
+            </div>
+            <div class="footer-nav-group">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="footer-nav-group-collect">
+                <a href="mailto:info@himalayantrek.com" class="footer-nav">info@himalayantrek.com</a>
+              </div>
+            </div>
+            <div class="footer-nav-group">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="footer-nav-group-collect">
+                <a href="https://goo.gl/maps/c1DkrWimvgPC8zUP8" class="footer-nav">Anamnagar, 10
+                  Kathmandu, Nepal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="footer-company-info">
+        <div class="footer-logo">
+          <img src="./assets/images/logo/footer-logo.png" alt="footer-logo.png">
+        </div>
+        <div class="footer-info-detail">
+          <div class="footer-company-term">© 2022 Himalayan Trekking. All rights reserved.</div>
+          <div class="footer-general-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy and Cookies Statement</a>
+            <a href="#">How to Book</a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social-handles">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><img src="./assets/images/icons/tripadvisor-footer.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+
+     </div> 
+  </section> <!-- footer close -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/js/main-jquery.js"></script>
+  <script src="./assets/js/OwlCarousel2Classes.js"></script>
+ 
+</body>
+
+</html>

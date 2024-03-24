@@ -1,0 +1,166 @@
+/*********************
+Consistent Font Sizes
+*********************/
+
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+/*********************
+Center Block
+*********************/
+
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*********************
+Clearfix
+*********************/
+
+@mixin clearfix-after() {
+	clear: both;
+}
+@mixin clear() {
+	content: '';
+    clear: both;
+    display: block;
+}
+
+/*********************
+Vendor Prefix
+*********************/
+
+// @mixin vendor-prefix($name, $value) {
+// 	@each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+// 		#{$vendor}#{$name}: #{$value};
+// 	}
+// }
+
+/*********************
+Centering Items
+*********************/
+
+@mixin center($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if ($horizontal and $vertical) {
+		top: 50%;
+		left: 50%;
+    transform: translate(-50%,-50%);
+	} 
+	@else if ($horizontal) {
+		left: 50%;
+    transform: translate(-50%,0%);
+	} 
+	@else if ($vertical) {
+		top: 50%;
+    transform: translate(0%,-50%);
+	}
+}
+@mixin disable-absolute() {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%,0%);
+}
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  /* Large Devices, Wide Screens */
+  @if $point == wider {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+    /* Medium Devices, Desktops */
+  @else if $point == wide {
+    @media (min-width: 1199px) {
+      @content;
+    }
+  }
+    /* Medium Devices, Desktops */
+  @else if $point == medium {
+    @media (min-width: 991px) {
+      @content;
+    }
+  }
+    /* Small Devices, Tablets */
+  @else if $point == small {
+    //@media (min-width : 768px) { @content ; }
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+    /* Extra Small Devices, Phones */
+  @else if $point == smaller {
+    @media (min-width: 567px) {
+      @content;
+    }
+  }
+    /* Extra Small Devices, Phones */
+  @else if $point == extrasmall {
+    @media (min-width: 479px) {
+      @content;
+    }
+  }
+    /* Custom, iPhone Retina */
+  @else if $point == iPhone5 {
+    @media (min-width: 374px) {
+      @content;
+    }
+  }
+ 
+}
+
+
+/*********************
+Placeholders for input
+*********************/
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+/*********************
+Animations
+*********************/
+
+@mixin keyframes($name) {
+   @keyframes #{$name} {
+     @content;
+   }
+}
+
+/*********************
+Transition
+*********************/
+
+@mixin transition($value) {
+  transition: $value;
+}

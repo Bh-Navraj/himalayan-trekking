@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams</title>
+  <link rel="shortcut icon" href="./assets/images/logo/logo_white.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+  <!-- Header -->
+  <section class="header">
+    <div class="header-wrapper-main">
+    <div class="header-wrapper">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo/logo_white.png" alt="logo" />
+      </a>
+      <div class="menus">
+        <div class="top-menu">
+          <div class="whatsapp">
+            <a href="">
+              <img src="./assets/images/icons/whatsapp.svg" alt="whatsapp" />
+              <h5 class="whatsapp-no">+977 984-1549864</h5>
+            </a>
+          </div>
+          <div class="search">
+            <form action="get" class="search-form">
+              <input type="search" class="search-trip" placeholder="Search Trip" />
+              <button>
+                <img src="./assets/images/icons/search.svg" alt="" />
+              </button>
+            </form>
+            <img src="./assets/images/icons/search.svg" class="search-switch" alt="search" />
+          </div>
+      
+          <button class="menu-burger"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="bottom-menu">
+          <div class="nav-wrapper">
+            <nav role="navigation">
+              <div class="nav-toggle">
+                <span class="nav-back"></span>
+                <span class="nav-title">Menu</span>
+                <span class="nav-close"></span>
+              </div>
+              <ul class="main-nav">
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Activities</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/faq" class="nav-link">Treakking</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="vertical-nav">
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Everest Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Everest Panorama 7 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Luxary trek 10 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Panaroma Tengboche 11 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Annapurna Region Trekking</a></li>
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Langtang Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Langtang Kenjin Gompa 10 Days</a></li>
+                        <li class="has-dropdown">
+                          <a href="/faq" class="nav-link">Shamanism Ruby Vally 10 Days</a>
+                          <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                          <ul class="vertical-nav">
+                            <li><a href="#" class="nav-link">Langtang –Ganja-La Pass 14 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 16 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 24 Days</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#" class="nav-link">Langtang Chisapani 4 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Manaslu Region Trekking</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Destinations</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/testimonials" class="nav-link">Tours</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="horizontal-nav">
+                    <li>
+                      <a href="/ktm_tour" class="nav-link">Kathmandu Day Tour</a>
+                    </li>
+                    <li><a href="#" class="nav-link">Kathmandu Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Family Tour</a></li>
+                    <li><a href="#" class="nav-link">Lumbini Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Homestay Tour</a></li>
+                    <li><a href="#" class="nav-link">Himalaya Tour</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-button">Gift a Tour</a></li>
+                <li><a href="#" class="nav-button nav-button-fillup">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--  Nav -->
+    <!-- Side nav close -->
+  </section>
+  <!-- Header close -->
+  <!-- Banner -->
+  <section class="banner banner-inner">
+    <div class="banner-wrapper">
+      <div class="banner-header">
+        <section class="section-space-x banner-header-section">
+          <div class="banner-main">
+            <h1>Teams</h1>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Close -->
+  <!-- team blog -->
+  <section class="team-wrapper section-space">
+   <div class="container">
+    <div class="row">
+      <div class="col-12 team-container-title">
+        <h3>Teams</h3>
+        <p>We have a unique way of meeting your trip expectations!</p>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="team-cart">
+          <div class="team-image">
+            <img src="./assets/images/uploads/Frame 23 (1).svg" alt="" srcset="">
+          </div>
+          <div class="team-detail">
+            <h5 class="">
+              Alexander D.
+            </h5>
+            <div class="detail">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde consequatur voluptatem sequi, cumque
+                doloremque rerum perferendis deserunt vel accusantium iusto obcaecati fugit nemo dolores accusamus
+                eaque! Blanditiis, alias velit! Explicabo, beatae sed corporis cumque laboriosam suscipit, tempore
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="team-cart">
+          <div class="team-image">
+            <img src="./assets/images/uploads/Frame 23 (1).svg" alt="" srcset="">
+          </div>
+          <div class="team-detail">
+            <h5 class="">
+              Alexander D.
+            </h5>
+            <div class="detail">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde consequatur voluptatem sequi, cumque
+                eaque! Blanditiis, alias velit! Explicabo, beatae sed corporis cumque laboriosam suscipit, tempore
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="team-cart">
+          <div class="team-image">
+            <img src="./assets/images/uploads/Frame 23 (1).svg" alt="" srcset="">
+          </div>
+          <div class="team-detail">
+            <h5 class="">
+              Alexander D.
+            </h5>
+            <div class="detail">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde consequatur voluptatem sequi, cumque
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="team-cart">
+          <div class="team-image">
+            <img src="./assets/images/uploads/Frame 23 (1).svg" alt="" srcset="">
+          </div>
+          <div class="team-detail">
+            <h5 class="">
+              Alexander D.
+            </h5>
+            <div class="detail">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde consequatur voluptatem sequi, cumque
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="team-cart">
+          <div class="team-image">
+            <img src="./assets/images/uploads/Frame 23 (1).svg" alt="" srcset="">
+          </div>
+          <div class="team-detail">
+            <h5 class="">
+              Alexander D.
+            </h5>
+            <div class="detail">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde consequatur voluptatem sequi, cumque
+                doloremque rerum perferendis deserunt vel accusantium iusto obcaecati fugit nemo dolores accusamus
+                eaque! Blanditiis, alias velit! Explicabo, beatae sed corporis cumque laboriosam suscipit, tempore
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+ <!-- newsletter -->
+ <section class="section-space newsletter-section">
+  <div class="container">
+    <div class="newsletter-wrapper">
+      <div class="newsletter-text">
+        <h4 class="newsletter-header">
+          Subscribe to Newsletter
+        </h4>
+        <p>Get Updated about Travel Tips, Idea andStories from Community</p>
+      </div>
+      <form action="#" action="POST" class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+<!-- newsletter close-->
+<section class="footer section-space  ">
+  <div class="container">
+    <div class="footer-wrapper">
+
+    
+ 
+  <div class="footer-associate">
+    <h3 class="footer-associate-header">We are Proudly Associated with</h3>
+    <div class="footer-associate-company">
+      <a href="#"><img src="./assets/images/uploads/asso1.png" alt="asso1.png"></a>
+      <a href="#"><img src="./assets/images/uploads/asso2.png" alt="asso2.png"></a>
+      <a href="#"><img src="./assets/images/uploads/asso3.png" alt="asso3.png"></a>
+      <a href="#"><img src="./assets/images/uploads/asso4.png" alt="asso4.png"></a>
+    </div>
+  </div>
+  <div class="footer-links row">
+    <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+      <div class="footer-link-group">
+        <h6 class="footer-link-title">
+          About Us
+        </h6>
+        <div class="footer-navigation">
+          <a href="#" class="footer-nav">About us</a>
+          <a href="#" class="footer-nav">Our Services</a>
+          <a href="#" class="footer-nav">Our Teams</a>
+          <a href="#" class="footer-nav">CSR</a>
+          <a href="#" class="footer-nav">Legal Documents</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+      <div class="footer-link-group">
+        <h6 class="footer-link-title">
+          Popular Trekking
+        </h6>
+        <div class="footer-navigation">
+          <a href="#" class="footer-nav">Mt. Kailash via Humla</a>
+          <a href="#" class="footer-nav">Rara Lake Trek</a>
+          <a href="#" class="footer-nav">Everest Basecamp Trek</a>
+          <a href="#" class="footer-nav">Annapurna Basecamp Trek</a>
+          <a href="#" class="footer-nav">Tilicho Lake Trek</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+      <div class="footer-link-group">
+        <h6 class="footer-link-title">
+          Popular Travel & Tour
+        </h6>
+        <div class="footer-navigation">
+          <a href="#" class="footer-nav">Lhasa City Tour</a>
+          <a href="#" class="footer-nav">Chitwan Safari</a>
+          <a href="#" class="footer-nav">Pokhara Fewa Lake Tour</a>
+          <a href="#" class="footer-nav">Bardiya Safari</a>
+          <a href="#" class="footer-nav">Rara Tour</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+      <div class="footer-link-group">
+        <h6 class="footer-link-title">
+          Contact
+        </h6>
+        <div class="footer-navigation">
+          <div class="footer-nav-group">
+            <i class="fa-solid fa-phone"></i>
+            <div class="footer-nav-group-collect">
+              <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+              <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+            </div>
+          </div>
+          <div class="footer-nav-group">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="footer-nav-group-collect">
+              <a href="mailto:info@himalayantrek.com" class="footer-nav">info@himalayantrek.com</a>
+            </div>
+          </div>
+          <div class="footer-nav-group">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="footer-nav-group-collect">
+              <a href="https://goo.gl/maps/c1DkrWimvgPC8zUP8" class="footer-nav">Anamnagar, 10
+                Kathmandu, Nepal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="footer-company-info">
+      <div class="footer-logo">
+        <img src="./assets/images/logo/footer-logo.png" alt="footer-logo.png">
+      </div>
+      <div class="footer-info-detail">
+        <div class="footer-company-term">© 2022 Himalayan Trekking. All rights reserved.</div>
+        <div class="footer-general-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy and Cookies Statement</a>
+          <a href="#">How to Book</a>
+          <a href="#">Contact us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-social-handles">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><img src="./assets/images/icons/tripadvisor-footer.svg" alt=""></a>
+    </div>
+  </div>
+</div>
+
+   </div> 
+</section> <!-- footer close -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+  integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+  integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="./assets/js/main-jquery.js"></script>
+<script src="./assets/js/OwlCarousel2Classes.js"></script>
+
+</body>
+
+</html>

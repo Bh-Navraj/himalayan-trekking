@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Trip</title>
+  <link rel="shortcut icon" href="./assets/images/logo/logo_white.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <section class="header">
+    <div class="header-wrapper-main">
+    <div class="header-wrapper">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo/logo_white.png" alt="logo" />
+      </a>
+      <div class="menus">
+        <div class="top-menu">
+          <div class="whatsapp">
+            <a href="">
+              <img src="./assets/images/icons/whatsapp.svg" alt="whatsapp" />
+              <h5 class="whatsapp-no">+977 984-1549864</h5>
+            </a>
+          </div>
+          <div class="search">
+            <form action="get" class="search-form">
+              <input type="search" class="search-trip" placeholder="Search Trip" />
+              <button>
+                <img src="./assets/images/icons/search.svg" alt="" />
+              </button>
+            </form>
+            <img src="./assets/images/icons/search.svg" class="search-switch" alt="search" />
+          </div>
+        
+          <button class="menu-burger"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+        </div>
+        <div class="bottom-menu">
+          <div class="nav-wrapper">
+            <nav role="navigation">
+              <div class="nav-toggle">
+                <span class="nav-back"></span>
+                <span class="nav-title">Menu</span>
+                <span class="nav-close"></span>
+              </div>
+              <ul class="main-nav">
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Activities</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/faq" class="nav-link">Treakking</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="vertical-nav">
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Everest Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Everest Panorama 7 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Luxary trek 10 Days</a></li>
+                        <li><a href="#" class="nav-link">Everest Panaroma Tengboche 11 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Annapurna Region Trekking</a></li>
+                    <li class="has-dropdown">
+                      <a href="/faq" class="nav-link">Langtang Region Trekking</a>
+                      <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                      <ul class="vertical-nav">
+                        <li><a href="#" class="nav-link">Langtang Kenjin Gompa 10 Days</a></li>
+                        <li class="has-dropdown">
+                          <a href="/faq" class="nav-link">Shamanism Ruby Vally 10 Days</a>
+                          <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                          <ul class="vertical-nav">
+                            <li><a href="#" class="nav-link">Langtang –Ganja-La Pass 14 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 16 Days</a></li>
+                            <li><a href="#" class="nav-link">Langtang Gosainkunda Chisapani 24 Days</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#" class="nav-link">Langtang Chisapani 4 Days</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#" class="nav-link">Manaslu Region Trekking</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Destinations</a></li>
+                <li class="has-dropdown main-nav-dropdown">
+                  <a href="/testimonials" class="nav-link">Tours</a>
+                  <button class="nav-more-option"><i class="fa-solid fa-chevron-right"></i></button>
+                  <ul class="horizontal-nav">
+                    <li>
+                      <a href="/ktm_tour" class="nav-link">Kathmandu Day Tour</a>
+                    </li>
+                    <li><a href="#" class="nav-link">Kathmandu Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Pokhara Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Family Tour</a></li>
+                    <li><a href="#" class="nav-link">Lumbini Tour</a></li>
+                    <li><a href="#" class="nav-link">Nepal Homestay Tour</a></li>
+                    <li><a href="#" class="nav-link">Himalaya Tour</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-button">Gift a Tour</a></li>
+                <li><a href="#" class="nav-button nav-button-fillup">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--  Nav -->
+    <!-- Side nav close -->
+  </section>
+  <!-- Header close -->
+  <!-- Banner -->
+  <section class="banner banner-inner">
+    <div class="banner-wrapper">
+      <div class="banner-header">
+        <section class="section-space-x banner-header-section">
+          <div class="banner-main">
+            <h1>Book Your Trip</h1>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Close -->
+  <section class="section-space container ">
+    <div class="form-wrapper">
+      <form action="" class="row">
+        <div class="col-sm-12">
+          <div class="form-input-title">
+            Trip Details
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-input-wrap">
+            <label for="package_name">Package Name</label>
+            <select name="package_name" id="package_name" class="form-input">
+              <option value="">Everest Base Camp Trek 1</option>
+              <option value="">Everest Base Camp Trek 2</option>
+              <option value="">Everest Base Camp Trek 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-input-wrap">
+            <label for="travel_date">Travel Date</label>
+            <input type="date" name="travel_date" id="travel_date" class="form-input" />
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-input-title">
+            Personal Details
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" class="form-input" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" class="form-input" />
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-input-wrap">
+            <label for="country">Country</label>
+            <select name="country" id="country" class="form-input">
+              <option value="">Select your Country</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Åland Islands">Åland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Bouvet Island">Bouvet Island</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+              <option value="Brunei Darussalam">Brunei Darussalam</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote D'ivoire">Cote D'ivoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Territories">French Southern Territories</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guernsey">Guernsey</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-bissau">Guinea-bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+              <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jersey">Jersey</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+              <option value="Korea, Republic of">Korea, Republic of</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macao">Macao</option>
+              <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of
+              </option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+              <option value="Moldova, Republic of">Moldova, Republic of</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Netherlands Antilles">Netherlands Antilles</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Pitcairn">Pitcairn</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russian Federation">Russian Federation</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Helena">Saint Helena</option>
+              <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+              <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands
+              </option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-leste">Timor-leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Virgin Islands, British">Virgin Islands, British</option>
+              <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+              <option value="Wallis and Futuna">Wallis and Futuna</option>
+              <option value="Western Sahara">Western Sahara</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-input" placeholder="eg.info@yourmail.com" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="contact">Contact Number</label>
+            <input type="number" name="contact" id="contact" class="form-input" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="arrival_date">Flight Arrival Date <span>(Optional)</span></label>
+            <input type="date" name="arrival_date" id="arrival_date" class="form-input"
+              placeholder="eg.info@yourmail.com" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="form-input-wrap">
+            <label for="departure_date">Flight Departure Date <span>(Optional)</span></label>
+            <input type="date" name="departure_date" id="departure_date" class="form-input"
+              placeholder="eg.info@yourmail.com" />
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-input-wrap">
+            <label for="other_detail">Other Detail <span>(Optional)</span></label>
+            <textarea name="other_detail" id="other_detail" class="form-input" placeholder="Write your message here..."
+              rows="4"></textarea>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-bottom">
+            <div class="form-payment-accept">
+              <button class="secure-payment-btn"><i class="fa-solid fa-shield-halved"></i>Secure Payment</button>
+              <div class="accept-cards">
+                <img src="./assets/images/icons/visa.svg" alt="visa.svg">
+                <img src="./assets/images/icons/master.svg" alt="master.svg">
+                <img src="./assets/images/icons/1933704_american express_amex_charge_credit card_payment_icon (1) 1.svg"
+                  alt="1933704_american express_amex_charge_credit card_payment_icon (1) 1.svg">
+              </div>
+            </div>
+            <button type="submit" class="button button-fillup">Proceed to Payment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- newsletter -->
+  <section class="section-space newsletter-section">
+    <div class="container">
+      <div class="newsletter-wrapper">
+        <div class="newsletter-text">
+          <h4 class="newsletter-header">
+            Subscribe to Newsletter
+          </h4>
+          <p>Get Updated about Travel Tips, Idea andStories from Community</p>
+        </div>
+        <form action="#" action="POST" class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- newsletter close-->
+  <section class="footer section-space  ">
+    <div class="container">
+      <div class="footer-wrapper">
+
+
+
+        <div class="footer-associate">
+          <h3 class="footer-associate-header">We are Proudly Associated with</h3>
+          <div class="footer-associate-company">
+            <a href="#"><img src="./assets/images/uploads/asso1.png" alt="asso1.png"></a>
+            <a href="#"><img src="./assets/images/uploads/asso2.png" alt="asso2.png"></a>
+            <a href="#"><img src="./assets/images/uploads/asso3.png" alt="asso3.png"></a>
+            <a href="#"><img src="./assets/images/uploads/asso4.png" alt="asso4.png"></a>
+          </div>
+        </div>
+        <div class="footer-links row">
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+            <div class="footer-link-group">
+              <h6 class="footer-link-title">
+                About Us
+              </h6>
+              <div class="footer-navigation">
+                <a href="#" class="footer-nav">About us</a>
+                <a href="#" class="footer-nav">Our Services</a>
+                <a href="#" class="footer-nav">Our Teams</a>
+                <a href="#" class="footer-nav">CSR</a>
+                <a href="#" class="footer-nav">Legal Documents</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+            <div class="footer-link-group">
+              <h6 class="footer-link-title">
+                Popular Trekking
+              </h6>
+              <div class="footer-navigation">
+                <a href="#" class="footer-nav">Mt. Kailash via Humla</a>
+                <a href="#" class="footer-nav">Rara Lake Trek</a>
+                <a href="#" class="footer-nav">Everest Basecamp Trek</a>
+                <a href="#" class="footer-nav">Annapurna Basecamp Trek</a>
+                <a href="#" class="footer-nav">Tilicho Lake Trek</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+            <div class="footer-link-group">
+              <h6 class="footer-link-title">
+                Popular Travel & Tour
+              </h6>
+              <div class="footer-navigation">
+                <a href="#" class="footer-nav">Lhasa City Tour</a>
+                <a href="#" class="footer-nav">Chitwan Safari</a>
+                <a href="#" class="footer-nav">Pokhara Fewa Lake Tour</a>
+                <a href="#" class="footer-nav">Bardiya Safari</a>
+                <a href="#" class="footer-nav">Rara Tour</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 footer-link-divide">
+            <div class="footer-link-group">
+              <h6 class="footer-link-title">
+                Contact
+              </h6>
+              <div class="footer-navigation">
+                <div class="footer-nav-group">
+                  <i class="fa-solid fa-phone"></i>
+                  <div class="footer-nav-group-collect">
+                    <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+                    <a href="tel:+977 9779851032316" class="footer-nav">+977 9779851032316</a>
+                  </div>
+                </div>
+                <div class="footer-nav-group">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div class="footer-nav-group-collect">
+                    <a href="mailto:info@himalayantrek.com" class="footer-nav">info@himalayantrek.com</a>
+                  </div>
+                </div>
+                <div class="footer-nav-group">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div class="footer-nav-group-collect">
+                    <a href="https://goo.gl/maps/c1DkrWimvgPC8zUP8" class="footer-nav">Anamnagar, 10
+                      Kathmandu, Nepal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="footer-company-info">
+            <div class="footer-logo">
+              <img src="./assets/images/logo/footer-logo.png" alt="footer-logo.png">
+            </div>
+            <div class="footer-info-detail">
+              <div class="footer-company-term">© 2022 Himalayan Trekking. All rights reserved.</div>
+              <div class="footer-general-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy and Cookies Statement</a>
+                <a href="#">How to Book</a>
+                <a href="#">Contact us</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-social-handles">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><img src="./assets/images/icons/tripadvisor-footer.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> <!-- footer close -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/js/main-jquery.js"></script>
+  <script src="./assets/js/OwlCarousel2Classes.js"></script>
+
+</body>
+
+</html>

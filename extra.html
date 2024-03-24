@@ -1,0 +1,51 @@
+<div class="lang-icon">
+    <span>Translate Language</span>
+    <ul>
+      <li class="lang">
+        <a data-id="#googtrans(en|zh-CN)" class="lang-zh-CN lang-select" data-lang="zh-CN"><img
+            src="./assets/images/icons/lang-1.png" alt="" /></a>
+      </li>
+      <li class="lang">
+        <a data-id="#googtrans(en|fr)" class="lang-fr lang-select" data-lang="fr"><img
+            src="./assets/images/icons/lang-2.png" alt="" /></a>
+      </li>
+      <li class="lang">
+        <a data-id="#googtrans(en|de)" class="lang-de lang-select" data-lang="de"><img
+            src="./assets/images/icons/lang-3.png" alt="" /></a>
+      </li>
+      <li class="lang">
+        <a data-id="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img
+            src="./assets/images/icons/lang-4.png" alt="" /></a>
+      </li>
+      <li class="lang">
+        <a data-id="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img
+            src="./assets/images/icons/lang-5.png" alt="" /></a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT,
+        },
+        "google_translate_element"
+      );
+    }
+    function triggerHtmlEvent(element, eventName) {
+      var event;
+      if (document.createEvent) {
+        event = document.createEvent("HTMLEvents");
+        event.initEvent(eventName, true, true);
+        element.dispatchEvent(event);
+      } else {
+        event = document.createEventObject();
+        event.eventType = eventName;
+        element.fireEvent("on" + event.eventType, event);
+      }
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
